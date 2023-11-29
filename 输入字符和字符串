@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main(void)
+{
+	char ch[41]={0};	//声明字符串ch，ch是一个可容纳40个字符的数组
+	char s;
+
+	printf("字符串(最长40)\n");
+	scanf_s("%s", &ch,41);	//%s 的意思是scanf_s输入的类型是字符串，40 是字符串长40
+	printf("字符串%s\n", ch);	//%s 输出的类型是字符串
+
+	getchar();	//中间要加。按下Enter（回车）程序才会继续
+
+	printf("字符(1位)\n");
+	scanf_s("%c", &s,41);	//%c 输入的类型是字符，后面要再加个41，不然有警告，不知道为什么...
+	printf("字符%c\n", s);	//输出字符
+
+	getchar();	//第一个读取换行符
+	getchar();	//第二个让程序暂停，按下Enter（回车）继续
+
+	return 0;
+}
