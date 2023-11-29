@@ -1,4 +1,4 @@
-三个浮点类型
+三个浮点类型：
 float		7位有效数字
 double		15~17位有效数字
 long double	至少比double要大
@@ -19,3 +19,15 @@ printf("%f", a);		%f是打印数字
 显示的结果为0.0000363
 printf("%e", a);		%e是打印指数
 显示的结果为3.630000e-05
+
+
+复数和虚数的表达：
+复数浮点类型
+float_Complex
+double_Complex
+long double_Complex
+
+虚数浮点类型
+float_Imaginary
+double_Imaginary
+long double_Imaginary
