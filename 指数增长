@@ -1,0 +1,25 @@
+/*在第一个格子放1个小麦，第二个格子放2个小麦，第三个格子放4个小麦，总共64个格子*/
+#include<stdio.h>
+#define GESHU 64		//64个格数
+#define NIANCHAN 2e16	//年产2e16
+
+int main(void)
+{
+	int geshu=1;	//格数初始化1
+	float xiaomai,zongxiaomai,nianchanzhanbi;
+	zongxiaomai = 0;	//总小麦初始化0
+	xiaomai = 1;		//小麦初始化1
+	nianchanzhanbi = 0; //年产占比初始化0
+
+	printf("第几格	多少小麦  一共多少小麦  与年产的占比\n");
+	while (geshu <= GESHU)	//格数<总格数，就无限循环
+	{
+		zongxiaomai = zongxiaomai + xiaomai;	//总小麦=总小麦+小麦
+		nianchanzhanbi = zongxiaomai / NIANCHAN;//年产占比=总小麦/年产
+		printf("%6d %9.2e %13.2e %13.2e\n",geshu,xiaomai,zongxiaomai,nianchanzhanbi);
+		xiaomai = xiaomai * 2;	//小麦=小麦*2
+		geshu++;	//格数++
+	}
+
+	return 0;
+}
