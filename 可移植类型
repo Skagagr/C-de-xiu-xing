@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<inttypes.h>	//支持可移植类型
+
+/*
+可移植类型在每台计算机占的位数都相同
+有	int8_t	int16_t int32_t	int64_t
+和最大的有符号整数类型的 intmax_t 可以储存任何有效的有符号整数值
+前面加一个 u 就是无符号的 如 uintmax_t 就是无符号的
+*/
+int main(void)
+{
+	uint8_t ume8;	//me32 是一个8位无符号整型变量
+	int8_t me8;		//me32 是一个8位有符号整型变量
+	ume8 = 255;
+	me8 = 127;
+
+	printf("ume8 = %d\n", ume8);
+	printf("me8 = %d\n", me8);
+
+	return 0;
+
+}
