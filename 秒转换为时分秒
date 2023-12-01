@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int shi, fen, miao;
+	shi = fen = 0;
+	miao = 1;
+
+	while (1)	//无限循环
+	{
+		printf("输入秒转换为分钟和小时，输入0或以下的结束\n");
+		scanf_s("%d", &miao);	//输入秒然后转换
+		if (miao <= 0)break;	//如果输入的是0或以下的就跳出
+
+		fen = miao / 60;
+		if (fen > 60)
+		{
+			shi = fen / 60;	//1小时等于60分钟
+			fen = fen - shi * 60;	//分钟减去小时，剩余的就是多少分钟
+		}
+		miao = miao - fen * 60 - shi * 3600;	//秒减去分钟和小时
+		printf("%d:%d:%d", shi, fen, miao);	//显示 时：分：秒
+		shi = fen = miao = 0;	//清零
+	}
+
+	return 0;
+}
