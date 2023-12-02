@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+void Temperatures(double huashi)
+{
+	double sheshi, kaishi;
+
+	sheshi = 5.0 / 9.0 * (huashi - 32.0);
+	kaishi = sheshi + 273.16;
+	printf("摄氏温度%.2f\n", sheshi);
+	printf("开氏温度%.2f\n", kaishi);
+}
+
+int main(void)
+{
+	double w, q;
+	w = q = 0;
+
+	while (1)
+	{
+		printf("输入华氏温度转换为摄氏和开氏温度\n");
+		q = scanf_s("%lf", &w);	//转换 double 类型，要使用%lf 加个小写的L 避免精度丢失
+		if (q == 0)break;	//输入数字以外的字符 scanf 返回0，跳出
+		Temperatures(w);
+	}
+	return 0;
+}
