@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void)	//计算平方和
+{
+	int count, sum, s, d;
+	count = sum = d = 0;	
+
+	printf("输入天数\n");
+	scanf_s("%d", &s);	//第一天1$第二天4$第三天9$
+	while (count++ < s)
+	{
+		sum = count * count;	
+		d = sum + d;	//每天加起来
+	}
+	printf("sun = %d\n", d);
+
+	return 0;
+}
