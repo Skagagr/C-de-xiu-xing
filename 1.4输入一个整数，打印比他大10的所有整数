@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int s,d;
+
+	printf("输入一个整数，打印比他大10的所有整数\n");
+	scanf_s("%d", &s);
+	for (d = 0; d < 11; d++)
+	{
+		printf("%d ", s);
+		s++;
+	}
+
+	return 0;
+}
