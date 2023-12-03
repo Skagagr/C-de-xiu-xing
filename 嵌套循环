@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main(void)
+{
+	char ch;
+	int row;
+
+	for (row = 0; row < 6; row++)
+	{
+		for (ch = ('A'+row); ch < ('A' + 6); ch++)	//嵌套循环的变式
+		{											//每次外面的循环一次里面的循环次数都会减1
+			printf("%c", ch);
+		}
+		printf("\n");
+	}
+	return 0;
+}
