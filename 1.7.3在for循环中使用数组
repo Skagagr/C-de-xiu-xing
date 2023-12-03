@@ -1,0 +1,25 @@
+#include<stdio.h>
+#define SIZE 10
+#define PAR 72
+
+int main()
+{
+	int i, score[SIZE];
+	int s = 0;
+	float a;
+
+	printf("输入%d个分数", SIZE);
+	for (i = 0; i < SIZE; i++)
+		scanf_s("%d", &score[i]);	//读取10个分数
+	printf("输入的分数如下:");
+	for (i = 0; i < SIZE; i++)
+		printf("%5d", score[i]);	//打印输入的10个分数
+	printf("\n");
+	for (i = 0; i < SIZE; i++)
+		s += score[i];				//求总分数
+	a = (float)s / SIZE;			//求平均数
+	printf("分数总和=%d 平均=%.2f\n", s, a);
+	printf("这是%.0f分的劣势", a - PAR);
+
+	return 0;
+}
