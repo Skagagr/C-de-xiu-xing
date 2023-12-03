@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main(void)
+{
+	const int s = 13;
+	int c;
+
+	do
+	{
+		scanf_s("%d", &c);
+	} while (c != s);	//出口条件循环，c不等于s就会一直循环do里面的语句
+	
+	printf("123\n");	//c等于s就出去了，执行下一条语句
+	printf("456");
+	
+
+	return 0;
+}
