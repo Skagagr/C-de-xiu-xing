@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main(void)
+{
+	char ch[40] = { 0 };	//声明数组
+	int a, s, d;
+
+	printf("输入一个单词，倒序打印\n");
+	scanf_s("%s", ch, 40);
+	d = a = strlen(ch);	//strlen函数 读取数组的元素个数，然后赋值给d和a
+	for (s = 0; s <= d; s++, a--)
+	{
+		printf("%c", ch[a]);	//从最后一个一直打印到第一个
+	}
+
+	return 0;
+}
