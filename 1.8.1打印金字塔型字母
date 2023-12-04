@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int main(void)	//打印金字塔型字母
+{
+	int s, d, f, g,h;
+	char ch,AA;
+
+	printf("输入一个大写字母\n");
+	scanf_s("%c", &ch, 1);
+	AA = ch;	//把输入的字符保存进AA
+	for (s = 1, d = 5,h=1; s < 6; s++, d--,h++)
+	{
+		for (f = d; f > 0; f--)	//空字符，从多到少
+		{
+			printf(" ");	//空字符
+		}
+		for (AA-=4,g = 0; g < h; g++)	//升序打印字母
+		{
+			printf("%c", AA++);	//AA自加
+		}
+		AA--;	//字符顺序先自减
+		AA--;	//再次自减
+		for (g = 1; g < h; g++)	//降序打印字母
+		{
+			printf("%c", AA--);	//AA自减
+		}
+		AA = ch;	//每次打印完一行AA初始化
+		printf("\n");	//下一行
+	}
+
+	return 0;
+}
