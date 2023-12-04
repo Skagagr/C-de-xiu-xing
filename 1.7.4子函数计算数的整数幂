@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+double power(double n, int p)	
+{
+	double pow = 1;
+	int i;
+
+	for (i = 0; i < p; i++)
+		pow *= n;
+
+	return pow;	//返回pow的值
+}
+
+int main()
+{
+	double x, xpow;
+	int exp;
+
+	printf("计算数的整数幂\n");
+	printf("启动！\n");
+	while (scanf_s("%lf%d", &x, &exp) == 2)	//scanf 读取几个数就返回几，读取错误返回0，给x exp 这两个变量输入所以返回2
+	{										
+		xpow = power(x, exp);	//调用子函数 xpow 就等于子函数返回的pow的值
+		printf("%.3g aaa %d aaa %.5g\n", x, exp, xpow);
+	}
+	printf("结束\n");
+
+	return 0;
+}
