@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main(void)
+{
+	char shuzu[255] = { 0 };
+	int s, d, f;
+	d = s = f = 0;
+
+	printf("输入一行字符，每个字符之间要有空格，上限255，倒序输出\n");
+	while (1)
+	{
+		scanf_s("%c", &shuzu[d], 255);
+		d++;
+		if (getchar() == '\n')break;	//是否输入回车也就是\n 输入了就跳出
+	}
+	s = f = strlen(shuzu);	//strlen函数 返回数组的元素个数
+	for (d = 0; d <= f; d++, s--)
+	{
+		printf("%c", shuzu[s]);
+	}
+
+	return 0;
+}
