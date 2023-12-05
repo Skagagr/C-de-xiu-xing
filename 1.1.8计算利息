@@ -1,0 +1,52 @@
+#include<stdio.h>
+
+void yi()
+{
+	double DA, DE;
+	int nian;
+	DA = DE = 100;
+	nian = 0;
+
+	printf("DA每年获得100元的%10利息\n");
+	printf("DE每年获得100元的%5加利息的利息\n");
+	printf("DE要多少年钱才会超过DA,并显示各多少钱\n");
+
+	do
+	{
+		DA += 100 / 10;
+		DE += DE / 20;
+		nian++;
+	} while (DA > DE);
+
+	printf("%d年\nDA:%lf\nDE:%lf\n", nian, DA, DE);
+}
+
+void er()
+{
+	double CH;
+	int a;
+	CH = 1000000;
+	a = 0;
+
+	printf("CH存100万，每年%8利息\n");
+	printf("每年的最后取10万\n");
+	printf("多少年取完\n");
+
+	do
+	{
+		CH += CH / 12;
+		CH -= 100000;
+		a++;
+	} while (CH >= 100000);
+
+	printf("需要%d年\n剩余%.2lf元", a, CH);
+}
+
+int main(void)
+{
+	yi();
+	printf("\n\n\n");
+	er();
+
+	return 0;
+}
