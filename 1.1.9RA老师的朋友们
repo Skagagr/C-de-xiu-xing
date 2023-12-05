@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main(void)
+{
+	int RA, a;
+	RA = 5;
+	a = 0;
+
+	printf("RA有5个朋友，一周减少1个，剩下的翻倍\n");
+	printf("计算并显示每周朋友数量\n");
+	printf("直到超过邓巴数150个\n");
+
+	do
+	{
+		RA--;
+		RA *= 2;
+		a++;
+		printf("第%d周%5d个朋友\n", a, RA);
+	} while (RA <= 150);
+
+	return 0;
+}
