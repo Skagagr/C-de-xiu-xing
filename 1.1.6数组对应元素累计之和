@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int main(void)
+{
+	double yi[8] = { 0 }, er[8] = { 0 };	//要输入={0}初始化，不然有警告
+	int a, s, d;
+	a = s = d = 0;
+
+	printf("为数组输入8个值\n");
+	printf("第二个数组的第一位是第一个数组的对应元素的总和\n");
+
+	for (s = 0; s < 8; s++)
+		scanf_s("%lf", &yi[s]);	//输入，这个也要加个_s
+
+	er[0] = yi[0];		//给第1个赋值
+	for (s = 1,d=1; s < 8; s++,d+=2)
+		er[s] = yi[s] + er[--d];	//计算然后赋值
+
+	printf("\n第一个数组");
+	for (s = 0; s < 8; s++)
+		printf("%7.2lf", yi[s]);
+	printf("\n第二个数组");
+	for (s = 0; s < 8; s++)
+		printf("%7.2lf", er[s]);
+	printf("\n结束");
+
+	return 0;
+}
