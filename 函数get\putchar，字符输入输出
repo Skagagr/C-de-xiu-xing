@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<ctype.h>	
+
+int main(void)
+{
+	char ch;
+
+	while ((ch = getchar()) != '\n')	//getchat 字符输入
+	{
+		if (isalpha(ch))	//isalpha里面的参数是字母返回值为真
+			putchar(ch + 1);	//输入的是字母就+1
+		else
+			putchar(ch);	//不是的话就原样打印出来				
+	}
+	putchar(ch);			//putchar 字符输出
+
+	return 0;
+}
