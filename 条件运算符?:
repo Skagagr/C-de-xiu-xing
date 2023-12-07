@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main()	//条件运算符?:	if else语句的便携方式
+{
+	int a;
+	printf("%d", a = 0 ? 2 : 3);
+	//a= (真或假) ? 2 : 3
+	//真 就把2赋值给a
+	//假 就把3赋值给a
+
+	printf("\n");
+
+	//和下面的if else 一样
+	int s;
+	if (1)
+		s = 2;
+	else
+		s = 3;
+	printf("%d", s);
+
+	return 0;
+}
