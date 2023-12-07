@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main()
+{
+	_Bool bool = 0;
+	int zifu = 0;
+	int danci = 0;
+	int hang = 0;
+	char c;
+
+	printf("输入单词，统计字符数，单词，行数,输入|结束\n");
+	while (1)
+	{
+		c = getchar();
+		zifu++;
+		if (c == '\n')	//回车，行就++(其实有检测换行的函数的)
+			hang++;
+		if (c == ' '||c=='\n')	//空格或回车就单词++
+			danci++;	
+		if (c == '|')	//输入|结束
+			break;
+	}
+	printf("%d字符 %d单词 %d行", zifu, danci, hang);
+
+	return 0;
+}
