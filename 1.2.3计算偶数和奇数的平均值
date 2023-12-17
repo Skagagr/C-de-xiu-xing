@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+int main()
+{
+	int AA[100] = { 0 };
+	int SS[100] = { 0 };
+	int a, s, d, f;
+	float g, h;
+	a = s = d = f = g = h = 0;
+
+	printf("输入整数，计算偶数和奇数的平均值\n");
+	while (1)
+	{
+		scanf_s("%d", &a);
+		if (a == 0)break;
+		if (a % 2 == 0)//偶数
+		{
+			AA[s] = a;
+			s++;
+		}
+		else	//奇数
+		{
+			SS[d] = a;
+			d++;
+		}
+	}
+	printf("偶数有\n");
+	for (f = 0; f <= s; f++)
+	{
+		printf("%d ", AA[f]);
+		g += AA[f];//偶数总大小
+	}
+	g = g / s;	//平均值
+	printf("\n奇数有\n");
+	for (f = 0; f <= d; f++)
+	{
+		printf("%d ", SS[f]);
+		h += SS[f];//奇数总大小
+	}
+	h = h / d;	//平均值
+	printf("\n偶数平均值%f\n奇数平均值%f", g, h);
+
+	return 0;
+}
