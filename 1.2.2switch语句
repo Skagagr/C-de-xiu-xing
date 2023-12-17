@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main()
+{
+	char c;
+  //改了很多不知道哪里的bug然后莫名奇妙就可以运行了???奇怪
+	while (1)
+	{
+		c = getchar();
+		switch (c)
+		{
+		case 'a':printf("输入a\n"); break;
+		case 's':printf("输入s\n"); break;
+		case 'A':printf("输入A\n"); break;
+		case 'S':printf("输入S\n"); break;
+		case '2':printf("输入2\n"); break;
+		case 10: break;
+		default:printf("输入的是%c\n错误\n", c);
+		}
+	}
+	return 0;
+}
